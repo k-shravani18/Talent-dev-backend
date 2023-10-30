@@ -22,6 +22,9 @@ public class PerformanceReport {
     @ManyToOne
     private Trainee trainee;
 
+    @OneToOne
+    private Assessment assessment;
+
     private LocalDate monthYear;
     private Double score;
 

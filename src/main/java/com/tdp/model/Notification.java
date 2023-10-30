@@ -21,8 +21,8 @@ public class Notification {
 //    @ManyToOne
 //    private User recipient;
 
-    @ManyToOne
-    private Trainee trainee;
+//    @ManyToOne
+//    private Trainee trainee;
 
     private LocalDateTime dateTime;
 

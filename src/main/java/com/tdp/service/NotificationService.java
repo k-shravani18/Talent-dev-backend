@@ -35,7 +35,7 @@ public class NotificationService {
         if (existingNotification.isPresent()) {
             Notification notification = existingNotification.get();
             notification.setMessage(updatedNotification.getMessage());
-            notification.setTrainee(updatedNotification.getTrainee());
+//            notification.setTrainee(updatedNotification.getTrainee());
             notification.setDateTime(updatedNotification.getDateTime());
             return notificationRepository.save(notification);
         } else {

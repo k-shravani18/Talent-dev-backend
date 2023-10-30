@@ -33,8 +33,9 @@ public class AssessmentService {
         if (existingAssessment.isPresent()) {
             Assessment assessment = existingAssessment.get();
             assessment.setSkill(updatedAssessment.getSkill());
-            assessment.setTrainee(updatedAssessment.getTrainee());
-            assessment.setScore(updatedAssessment.getScore());
+//            assessment.setTrainee(updatedAssessment.getTrainee());
+            assessment.setDate(updatedAssessment.getDate());
+//            assessment.setScore(updatedAssessment.getScore());
             return assessmentRepository.save(assessment);
         } else {
             throw new AssessmentNotFoundException();

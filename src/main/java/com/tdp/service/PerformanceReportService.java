@@ -35,6 +35,7 @@ public class PerformanceReportService {
         if (existingPerformanceReport.isPresent()) {
             PerformanceReport performanceReport = existingPerformanceReport.get();
             performanceReport.setTrainee(updatedPerformanceReport.getTrainee());
+            performanceReport.setAssessment(updatedPerformanceReport.getAssessment());
             performanceReport.setMonthYear(updatedPerformanceReport.getMonthYear());
             performanceReport.setScore(updatedPerformanceReport.getScore());
             return performanceReportRepository.save(performanceReport);

@@ -32,10 +32,13 @@ public class TraineeService {
         if (existingTrainee.isPresent()){
             Trainee trainee = existingTrainee.get();
             trainee.setName(updateTrainee.getName());
-            // Set other properties as needed
+            trainee.setInternStartDate(updateTrainee.getInternStartDate());
+            trainee.setInternEndDate(updateTrainee.getInternEndDate());
+            trainee.setInternCompleted(updateTrainee.isInternCompleted());
+
             return traineeRepository.save(trainee);
         } else {
-            throw new TraineeNotFoundException();
+            throw new TraineeNotFoundException("Trainee with ID " + id + " not found");
         }
     }
 

@@ -26,8 +26,11 @@ public class Trainee {
     @ManyToOne
     private Trainer trainer;
 
-    @OneToMany(mappedBy = "trainee")
-    private Set<Assessment> assessments = new HashSet<>();
+//    @OneToMany(mappedBy = "trainee")
+//    private Set<Assessment> assessments = new HashSet<>();
+    //    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinColumn(name = "trainee_id")
+//    private Set<Assessment> assessments = new HashSet<>();
 
 
     @OneToMany(mappedBy = "trainee")
